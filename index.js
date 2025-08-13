@@ -15,9 +15,9 @@ const axios = require('axios');
 const app = express();
 app.use(express.json());
 
-const TOKEN = "TON_TOKEN_TELEGRAM"; // Mets ici ton token BotFather
+const TOKEN = "8428068850:AAHKacmOozltRL17UMcLDDVTMQgOlWQIuGg"; // Mets ici ton token BotFather
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`;
-const WEBHOOK_URL = "https://TON_URL_RENDER.onrender.com/webhook"; // On remplacera après déploiement
+const WEBHOOK_URL = "https://telegram-bot-5lsq.onrender.com"; // On remplacera après déploiement
 
 // Fonction pour envoyer un message
 async function sendMessage(chatId, text) {
