@@ -1,3 +1,14 @@
+import TelegramBot from 'node-telegram-bot-api';
+
+const token = process.env.BOT_TOKEN;
+const bot = new TelegramBot(token, { polling: true });
+
+// Commande /dormants
+bot.onText(/^\/dormants/, (msg) => {
+  const chatId = msg.chat.id;
+  bot.sendMessage(chatId, "Voici ton rapport des cryptos dormantes :\nhttps://www.bitpanda.com/fr/prix/cosmos-atom");
+});
+
 const express = require('express');
 const axios = require('axios');
 
